@@ -1,0 +1,35 @@
+{
+  "name": "env-name",
+  "version": "1.0.0",
+  "description": "Get environment description (node + browser)",
+  "license": "MIT",
+  "repository": "vdemedes/env-name",
+  "author": {
+    "name": "Vadim Demedes",
+    "email": "vdemedes@gmail.com",
+    "url": "https://github.com/vdemedes"
+  },
+  "scripts": {
+    "test": "xo && nyc node test.js",
+		"test-browser": "browserify test.js | testling",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "files": [
+    "index.js"
+  ],
+  "xo": {
+    "extends": "vdemedes",
+    "env": ["node", "browser"]
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "coveralls": "^2.11.6",
+    "eslint-config-vdemedes": "^1.0.2",
+    "nyc": "^5.3.0",
+    "testling": "^1.7.1",
+    "xo": "^0.12.1"
+  },
+  "dependencies": {
+    "env-info": "^1.0.0"
+  }
+}
