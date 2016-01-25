@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "xo && nyc node test.js",
-		"test-browser": "browserify test.js | testling",
+    "test-browser": "browserify test.js | testling",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "files": [
@@ -19,13 +19,17 @@
   ],
   "xo": {
     "extends": "vdemedes",
-    "env": ["node", "browser"]
+    "env": [
+      "node",
+      "browser"
+    ]
   },
   "devDependencies": {
     "browserify": "^13.0.0",
     "coveralls": "^2.11.6",
     "eslint-config-vdemedes": "^1.0.2",
     "nyc": "^5.3.0",
+    "tape": "^4.4.0",
     "testling": "^1.7.1",
     "xo": "^0.12.1"
   },
